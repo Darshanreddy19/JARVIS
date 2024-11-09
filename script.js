@@ -7,7 +7,6 @@ function speak(text){
     text_speak.rate=1
     text_speak.pitch=1
     text_speak.volume=1
-    text_speak.lang="hi-GB"
     window.speechSynthesis.speak(text_speak)
 }
 
@@ -44,7 +43,7 @@ function takeCommand(message){
    voice.style.display="none"
     btn.style.display="flex"
     if(message.includes("hello")||message.includes("hey")||message.includes("hi")){
-        speak("hello sir,what can i help you?")
+        speak("hello ,how can i help you?")
     }
     else if(message.includes("who are you")){
         speak("i am JARVIS ,created by DARSHAN")
