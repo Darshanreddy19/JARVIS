@@ -44,7 +44,7 @@ function takeCommand(message){
    voice.style.display="none"
     btn.style.display="flex"
     if(message.includes("hello")||message.includes("hey")){
-        speak("hello ,how can i help you?")
+        speak("hello , howw can i help you?")
     }
     else if(message.includes("who are you")){
         speak("i am JARVIS ,created by DARSHAN")
