@@ -43,17 +43,24 @@ btn.addEventListener("click",()=>{
 function takeCommand(message){
    voice.style.display="none"
     btn.style.display="flex"
-    if(message.includes("hello")||message.includes("hey")){
+    if(message.includes("hello")||message.includes("hey")||message.includes("hi")){
         speak("hello sir,what can i help you?")
     }
     else if(message.includes("who are you")){
-        speak("i am virtual assistant ,created by Ayush Sir")
+        speak("i am JARVIS ,created by DARSHAN")
     }else if(message.includes("open youtube")){
         speak("opening youtube...")
         window.open("https://youtube.com/","_blank")
+    }else if(message.includes("ipshita")||message.includes("panda")){
+        speak("history deleted successfully")
     }
-    
-    else if(message.includes("open google")){
+    else if(message.includes("who is darshan")){
+        speak("my creator and the greatest of all time")
+    }else if(message.includes("who is darshan's dad")||message.includes("whos is darshan's father")){
+        speak("HEMA KUMAR KONERU")
+    }else if(message.includes("who is darshan's mom")||message.includes("whos is darshan's mother")){
+        speak("KOMALA REDDY")
+    }else if(message.includes("open google")){
         speak("opening google...")
         window.open("https://google.com/","_blank")
     }
@@ -82,8 +89,8 @@ function takeCommand(message){
         speak(date)
       }
     else{
-        let finalText="this is what i found on internet regarding" + message.replace("shipra","") || message.replace("shifra","")
+        let finalText="this is what i found on internet regarding" + message.replace("JARVIS","") || message.replace("JARVIS","")
         speak(finalText)
-        window.open(`https://www.google.com/search?q=${message.replace("shipra","")}`,"_blank")
+        window.open(`https://www.google.com/search?q=${message.replace("JARVIS","")}`,"_blank")
     }
 }
