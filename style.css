@@ -58,3 +58,32 @@ cursor: pointer;
     box-shadow: 2px 2px 20px rgb(255, 0, 0),2px 2px 20px rgb(255, 0, 0);
     letter-spacing: 2px;
 }
+@media (max-width: 780px) {
+    #logo {
+        width: 50vw; 
+        max-width: 600px;
+
+    }
+
+    h1 {
+        font-size: 20px; 
+    }
+
+    #name {
+        font-size: 40px; 
+    }
+
+    #va {
+        font-size: 20px;
+    }
+
+    #btn {
+        width: 80%; 
+        font-size: 18px;
+        padding: 8px; 
+    }
+
+    p {
+        font-size: 18px; 
+    }
+}

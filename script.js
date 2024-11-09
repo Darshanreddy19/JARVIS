@@ -7,6 +7,7 @@ function speak(text){
     text_speak.rate=1
     text_speak.pitch=1
     text_speak.volume=1
+    text_speak.lang="hi-GB"
     window.speechSynthesis.speak(text_speak)
 }
 
@@ -14,14 +15,17 @@ function wishMe(){
     let day=new Date()
     let hours=day.getHours()
     if(hours>=0 && hours<12){
-        speak("Good Morning ")
+        speak("Good Morning Sir")
     }
     else if(hours>=12 && hours <16){
-        speak("Good afternoon ")
+        speak("Good afternoon Sir")
     }else{
-        speak("Good Evening")
+        speak("Good Evening Sir")
     }
 }
+// window.addEventListener('load',()=>{
+//     wishMe()
+// })
 let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition 
 let recognition =new speechRecognition()
 recognition.onresult=(event)=>{
@@ -33,30 +37,22 @@ recognition.onresult=(event)=>{
 
 btn.addEventListener("click",()=>{
     recognition.start()
-    btn.style.display="none"
     voice.style.display="block"
+    btn.style.display="none"
 })
 function takeCommand(message){
    voice.style.display="none"
     btn.style.display="flex"
     if(message.includes("hello")||message.includes("hey")){
-        speak("hello,how can i help you?")
-    }
-    else if(message.includes("ipshita")||message.includes("panda")){
-        speak("history deleted")
-    }
-    else if(message.includes("is darshan gay"){
-        speak("no hes straight")
-    }
-    else if(message.includes("who is darshan")){
-        speak("hes my creator of course the greatest of all time")
+        speak("hello sir,what can i help you?")
     }
     else if(message.includes("who are you")){
-        speak("i am JARVIS  a virtual assistant ,created by Darshan")
+        speak("i am virtual assistant ,created by Ayush Sir")
     }else if(message.includes("open youtube")){
         speak("opening youtube...")
         window.open("https://youtube.com/","_blank")
     }
+    
     else if(message.includes("open google")){
         speak("opening google...")
         window.open("https://google.com/","_blank")
@@ -86,8 +82,8 @@ function takeCommand(message){
         speak(date)
       }
     else{
-        let finalText="this is what i found on internet regarding" + message.replace("JARVIS","") || message.replace("JARVIS","")
+        let finalText="this is what i found on internet regarding" + message.replace("shipra","") || message.replace("shifra","")
         speak(finalText)
-        window.open(`https://www.google.com/search?q=${message.replace("JARVIS","")}`,"_blank")
+        window.open(`https://www.google.com/search?q=${message.replace("shipra","")}`,"_blank")
     }
 }
